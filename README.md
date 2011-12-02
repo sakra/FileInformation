@@ -35,8 +35,8 @@ The following commands are available:
 
     get_timestamp_component(variable timestamp component)
 
-`get_timestamp_component` gets a specific component of a ISO 8601 formatted string. Valid
-components are `DATE`, `TIME`, `YEAR`, `MONTH`, `DAY`, `HOUR`, `MINUTE` and `SECOND`.
+`get_timestamp_component` gets a specific component of an [ISO 8601][iso8601] formatted string.
+Valid components are `DATE`, `TIME`, `YEAR`, `MONTH`, `DAY`, `HOUR`, `MINUTE` and `SECOND`.
 
     current_timestamp (variable [ component ])
 
