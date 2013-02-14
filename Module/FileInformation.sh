@@ -43,7 +43,7 @@ function to_cmake_permissions() {
 INPUT_OPTION=$1
 
 # format timestamp according to ISO 8601
-TIMESTAMP_FORMAT=%Y-%m-%dT%H:%M:%S
+TIMESTAMP_FORMAT=%Y-%m-%dT%H:%M:%S%z
 
 if [[ $OSTYPE == darwin* || $OSTYPE == freebsd* ]]
 then

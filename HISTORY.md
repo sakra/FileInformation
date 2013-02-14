@@ -1,3 +1,7 @@
+## 1.2.0 (2013-02-14)
+
+* add support for time zones
+
 ## 1.1.1 (2011-11-23)
 
 * fixed bug in `get_timestamp_component` in component parsing code

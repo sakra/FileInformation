@@ -16,6 +16,8 @@ current_timestamp(_time TIME)
 message (STATUS "current time is ${_time}")
 current_timestamp(_time YEAR)
 message (STATUS "current year is ${_time}")
+current_timestamp(_time TIMEZONE)
+message (STATUS "current time zone is ${_time}")
 
 file (SIZE "${CMAKE_CURRENT_LIST_FILE}" _size)
 file (TIMESTAMP "${CMAKE_CURRENT_LIST_FILE}" _timeStamp)
@@ -26,7 +28,7 @@ message (STATUS "${CMAKE_CURRENT_LIST_FILE} size is ${_size}")
 message (STATUS "${CMAKE_CURRENT_LIST_FILE} read content size is ${_contentSize}")
 message (STATUS "${CMAKE_CURRENT_LIST_FILE} timestamp is ${_timeStamp}")
 
-get_timestamp_component (_timeStampList ${_timeStamp} YEAR MONTH DAY HOUR MINUTE SECOND)
+get_timestamp_component (_timeStampList ${_timeStamp} YEAR MONTH DAY HOUR MINUTE SECOND TIMEZONE)
 message (STATUS "${CMAKE_CURRENT_LIST_FILE} timestamp as list is ${_timeStampList}")
 
 if (CMAKE_HOST_UNIX)
