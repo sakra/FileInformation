@@ -1,7 +1,7 @@
 FileInformation
 ===============
 
-FindMathematica is a CMake module that provides functionality for getting file information such as file size and file modification date and time.
+FileInformation is a CMake module that provides functionality for getting file information such as file size and file modification date and time.
 
 Features
 --------
