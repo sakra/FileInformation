@@ -60,6 +60,7 @@
 
 get_filename_component(FileInformation_CMAKE_MODULE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 set (FileInformation_CMAKE_MODULE_VERSION "1.2.0")
+find_program(BASH bash)
 
 # private function which invokes platform specific helper script
 function (_invoke_helper_script _command _filePath _outputVar _exitCodeVar)
@@ -79,7 +80,7 @@ function (_invoke_helper_script _command _filePath _outputVar _exitCodeVar)
 	endif()
 	string (TOLOWER "${_command}" _cmd)
 	execute_process(
-		COMMAND "${_helperScript}" "--${_cmd}" "${_filePath}"
+		COMMAND "${BASH}" "${_helperScript}" "--${_cmd}" "${_filePath}"
 		TIMEOUT 5
 		RESULT_VARIABLE _result
 		OUTPUT_VARIABLE _output
